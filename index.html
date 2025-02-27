@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>I would like you to click the button given below to display a greeting as per the current time.</p>
+    <button onclick="FunctionX()">Please hit me to display the greetings</button>
+    <p id="demo"></p>
+
+    <script>
+        function FunctionX() {
+            var myhours = new Date().getHours();
+            var myGreetings;
+
+            if (myhours < 8) {
+                myGreetings = "🌞 Have a good morning! I hope you have had a nutritious breakfast 🥪. Get ready for work 💪";
+            } else if (myhours < 15) {
+                myGreetings = "🍔 Have a great day! Don't forget to eat your lunch 🍗 and stay hydrated 💦";
+            } else {
+                myGreetings = "🌙 Have a great evening! Any special plans for dinner? 🍕🍷";
+            }
+
+            // Capitalize first letter automatically
+            myGreetings = myGreetings.charAt(0).toUpperCase() + myGreetings.slice(1);
+
+            // Display the message
+            document.getElementById("demo").innerHTML = myGreetings;
+        }
+    </script>
+</body>
+</html>
