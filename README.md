@@ -1,1 +1,1 @@
-this code i just learning
+This code is I just learning From Andy Vickler Java Script book.
